@@ -1,7 +1,5 @@
 package com.yopp.spring.BinSearch.BinarySearch;
 
-import java.sql.SQLOutput;
-
 public class QuickSort implements SortAlgorithm{
 
 //    Worst Case: O(n^2)
@@ -50,13 +48,6 @@ public class QuickSort implements SortAlgorithm{
         if(i < high)
         {quicksort(arr, i, high);}
 
-    }
-
-    //swap i and j in array
-    private void swap(int[] arr, int i, int j){
-        int temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
     }
 
     private void printArray(int[] arr, int low, int high){

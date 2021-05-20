@@ -15,11 +15,10 @@ public class BinarySearchApplication {
 
 		printArray(array, 0, len);
 
-		SortAlgorithm i = new QuickSort();
+		SortAlgorithm i = new BubbleSort();
 		array = i.sort(array);
 
 		printArray(array, 0, len);
-
 
 	}
 
