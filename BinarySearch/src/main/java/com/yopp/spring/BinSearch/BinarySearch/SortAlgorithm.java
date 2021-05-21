@@ -1,6 +1,7 @@
 package com.yopp.spring.BinSearch.BinarySearch;
 
 public interface SortAlgorithm {
+
     int[] sort(int[] numbers);
 
     //default swap function to swap to points in array
