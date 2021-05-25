@@ -1,5 +1,6 @@
 package com.yopp.spring.BinSearch.BinarySearch;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -15,7 +16,7 @@ public class BinarySearchApplication {
 
 		printArray(array, 0, len);
 
-		SortAlgorithm i = new BubbleSort();
+		SortAlgorithm i = new SelectionSort();
 		array = i.sort(array);
 
 		printArray(array, 0, len);

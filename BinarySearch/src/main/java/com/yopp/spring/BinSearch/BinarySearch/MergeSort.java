@@ -1,5 +1,6 @@
 package com.yopp.spring.BinSearch.BinarySearch;
 
+//Average Case O(nlogn)
 public class MergeSort implements SortAlgorithm {
     public int[] sort(int[] numbers) {
         int size = numbers.length -1;
