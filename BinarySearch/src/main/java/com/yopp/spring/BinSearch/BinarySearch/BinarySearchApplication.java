@@ -11,12 +11,12 @@ public class BinarySearchApplication {
 
 		SpringApplication.run(BinarySearchApplication.class, args);
 
-		int[] array = {9,8,3,6,7,2,1,4,5, 44, 38, 58, 58, 58, 383, 12};
+		int[] array = {9,8,3,6,7,2,1,4,5, 44, 38, 58, 58, 58, 383, 12, 50};
 		int len = array.length;
 
 		printArray(array, 0, len);
 
-		SortAlgorithm i = new SelectionSort();
+		SortAlgorithm i = new RadixSort();
 		array = i.sort(array);
 
 		printArray(array, 0, len);

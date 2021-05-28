@@ -2,6 +2,7 @@ package com.yopp.spring.BinSearch.BinarySearch;
 
 public class InsertionSort implements SortAlgorithm{
 
+    //Average Case O(n^2)
     public int[] sort(int[] numbers){
         int length = numbers.length;
         //cycle through each element in array
@@ -18,7 +19,6 @@ public class InsertionSort implements SortAlgorithm{
             //place index value in hole left after higher numbers have been shifted right
             numbers[subindex+1] = value;
         }
-
         return numbers;
     }
 }
