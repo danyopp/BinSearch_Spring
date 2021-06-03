@@ -1,5 +1,8 @@
-package com.yopp.spring.BinSearch.BinarySearch;
+package com.yopp.spring.BinSearch.BinarySearchImpl;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class HeapSort implements SortAlgorithm{
     public int[] sort(int[] numbers){
 

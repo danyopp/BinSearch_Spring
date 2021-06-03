@@ -1,21 +1,24 @@
-package com.yopp.spring.BinSearch.BinarySearch;
+package com.yopp.spring.BinSearch.BinarySearchImpl;
 
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
-@SpringBootApplication
-public class BinarySearchApplication {
+@Component
+public class BinarySearch {
 
-	SortAlgorithm algo;
+	@Autowired
+	private SortAlgorithm algo;
 
 	//loose coupling
-	BinarySearchApplication(SortAlgorithm algorithm){
+	//also used for constructor injection for spring
+	public BinarySearch(SortAlgorithm algorithm){
 		this.algo = algorithm;
 	}
 
 	public int search(int[] arr, int searchVal){
-		arr = algo.sort(arr);
-		return binSearch(arr, 0, arr.length-1,searchVal);
+		int[] sortedArr = algo.sort(arr);
+		return binSearch(sortedArr, 0, arr.length-1,searchVal);
 	}
 
 	private static void printArray(int[] arr, int low, int high){
@@ -25,6 +28,7 @@ public class BinarySearchApplication {
 		}
 	}
 
+	//sort algo is dependency of binary search
 	private static int binSearch(int[] arr, int startIndex, int endIndex, int searchVal){
 //		System.out.println(startIndex + " " + endIndex + " " + ((endIndex-startIndex)/2 + startIndex));
 		if(arr[((endIndex-startIndex)/2 + startIndex)] == searchVal) {

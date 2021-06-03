@@ -1,5 +1,10 @@
-package com.yopp.spring.BinSearch.BinarySearch;
+package com.yopp.spring.BinSearch.BinarySearchImpl;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
+@Primary
 public class BubbleSort implements SortAlgorithm{
 
     //    Average Case: O(n^2)

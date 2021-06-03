@@ -1,4 +1,4 @@
-package com.yopp.spring.BinSearch.BinarySearch;
+package com.yopp.spring.BinSearch.BinarySearchImpl;
 
 import java.util.Arrays;
 
