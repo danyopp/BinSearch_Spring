@@ -1,28 +1,21 @@
 package com.yopp.spring.BinSearch.BinarySearch;
 
 
-import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class BinarySearchApplication {
 
-	public static void main(String[] args) {
+	SortAlgorithm algo;
 
-		SpringApplication.run(BinarySearchApplication.class, args);
+	//loose coupling
+	BinarySearchApplication(SortAlgorithm algorithm){
+		this.algo = algorithm;
+	}
 
-		int[] array = {9,8,3,6,7,2,1,4,5, 44, 38, 58, 58, 58, 383, 12, 50};
-		int len = array.length;
-
-		printArray(array, 0, len);
-
-		SortAlgorithm i = new HeapSort();
-		array = i.sort(array);
-
-		printArray(array, 0, len);
-
-		int result = binSearch(array, 0, array.length-1, 53);
-		System.out.println("Result: " + result);
+	public int search(int[] arr, int searchVal){
+		arr = algo.sort(arr);
+		return binSearch(arr, 0, arr.length-1,searchVal);
 	}
 
 	private static void printArray(int[] arr, int low, int high){
